@@ -1,1 +1,16 @@
 <p>home works!</p>
+<app-content-list></app-content-list>
+<div [ngClass]="'class1 class2'">NgClass Example</div>
+<!-- true -->
+<div [ngClass]="['class1', 'class2']">NgClass Example2</div>
+<!-- true -->
+<div [ngClass]="{ class3: true }">NgClass Example3</div>
+<!-- true -->
+<div [ngClass]="{ class3: 3<5 }">NgClass Example4</div>
+<!-- true -->
+<div [ngClass]="{ class3: 3>5 }">NgClass Example5</div>
+<!-- false -->
+<div [ngClass]="{ class8: 3>5, class9: 'asd'==='asd' }">NgClass Example6</div>
+<!-- class8:false, class9:true -->
+<div [ngClass]="{ 'class1 class2 class3':  10 === 10 }">NgClass Example7</div>
+<!-- class1 class2 class3:true -->
