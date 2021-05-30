@@ -8,6 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContentModule } from './content/content.module';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContentModule } from './content/content.module';
     HeaderComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
