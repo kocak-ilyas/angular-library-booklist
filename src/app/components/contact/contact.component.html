@@ -1,1 +1,7 @@
-<p>contact works!</p>{{userName}}
+<p>contact works!</p>
+{{ userName }}
+<ul>
+    <li *ngFor="let user of users; let i = index">
+        {{ i + "&nbsp;" + "&nbsp;" + "&nbsp;" + user.name }} from {{ user.address.city }}
+    </li>
+</ul>

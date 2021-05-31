@@ -13,10 +13,16 @@ export class AboutComponent implements OnInit {
   // public ise .htlm'i içinde kullanılır, private ise kullanılamaz
 
   ngOnInit(): void {
-    this.userService.getUsersAll()
     this.setAboutUser()
   }
   setAboutUser() {
-    this.aboutUsers = this.userService.usersAll
+    this.aboutUsers = this.userService.getUsersAll()
   }
+  // ngOnInit(): void {
+  //   this.userService.getUsersAll()
+  //   this.setAboutUser()
+  // }
+  // setAboutUser() {
+  //   this.aboutUsers = this.userService.usersAll
+  // }
 }

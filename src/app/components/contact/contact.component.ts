@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ContactComponent implements OnInit {
   "userName": string
-  user: any
+  users: any
 
   constructor(private userService: UserService) { }
 
@@ -20,8 +20,8 @@ export class ContactComponent implements OnInit {
     this.userService
       .getUsers()
       .subscribe(res => {
-        // console.log(res)
-        this.user = res
+        this.users = res
+        console.log(this.users)
       })
   }
 }

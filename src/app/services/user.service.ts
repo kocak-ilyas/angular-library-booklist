@@ -11,6 +11,10 @@ export class UserService {
   constructor(
     private http: HttpClient
   ) { }
+  ngOnInit(): void {
+    this.getUsersAll()
+  }
+
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users')
   }
@@ -18,6 +22,7 @@ export class UserService {
     this.http.get(this.apiUrl + "users").subscribe(res => {
       this.usersAll = res
     })
+    return this.usersAll
   }
   // getUsersAll() {
   //   this.http.get(this.apiUrl + "users").subscribe(res => {
