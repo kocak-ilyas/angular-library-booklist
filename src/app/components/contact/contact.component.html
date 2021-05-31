@@ -1,7 +1,16 @@
-<p>contact works!</p>
-{{ userName }}
+<p>contact works!</p>{{ userName }}
+<ul>
+    <li *ngFor="let user of users">{{ user.name | avatar }} =>{{ user.name }}</li>
+</ul>
 <ul>
     <li *ngFor="let user of users; let i = index">
         {{ i + "&nbsp;" + "&nbsp;" + "&nbsp;" + user.name }} from {{ user.address.city }}
     </li>
 </ul>
+
+<hr /> {{ today | date: " d M Y " }}
+<hr /> {{ today | date: "d MM Y " }}
+<hr /> {{ today | date: "d MMM Y " }}
+<hr /> {{ today | date: "d MMM Y " | uppercase }}
+<hr /> {{ 9541254 | currency }}
+<hr /> {{ 54654644 | currency: "EUR " }}

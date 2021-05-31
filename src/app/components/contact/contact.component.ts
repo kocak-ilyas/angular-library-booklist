@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 export class ContactComponent implements OnInit {
   "userName": string
   users: any
+  today = Date.now()
 
   constructor(private userService: UserService) { }
 

@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContentModule } from './content/content.module';
 import { HighlightDirective } from './directives/highlight.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { AvatarPipe } from './pipes/avatar.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    HighlightDirective
+    HighlightDirective,
+    AvatarPipe
   ],
   imports: [
     BrowserModule,
