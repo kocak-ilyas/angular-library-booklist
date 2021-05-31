@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContentModule } from './content/content.module';
 import { HighlightDirective } from './directives/highlight.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HighlightDirective } from './directives/highlight.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ContentModule
+    ContentModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

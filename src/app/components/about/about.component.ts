@@ -8,11 +8,15 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
-  // public ise .htlm'i içnde kullanılır, private ise kullanılamaz
+  aboutUsers: any
+  constructor(private userService: UserService) { }
+  // public ise .htlm'i içinde kullanılır, private ise kullanılamaz
 
   ngOnInit(): void {
-
+    this.userService.getUsersAll()
+    this.setAboutUser()
   }
-
+  setAboutUser() {
+    this.aboutUsers = this.userService.usersAll
+  }
 }

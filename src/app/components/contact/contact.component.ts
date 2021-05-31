@@ -8,10 +8,20 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ContactComponent implements OnInit {
   "userName": string
+  user: any
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userName=this.userService.userName
+    this.userName = this.userService.userName
+    this.getUser()
   }
-
+  getUser() {
+    this.userService
+      .getUsers()
+      .subscribe(res => {
+        // console.log(res)
+        this.user = res
+      })
+  }
 }

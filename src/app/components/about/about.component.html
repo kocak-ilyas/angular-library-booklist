@@ -1,2 +1,8 @@
 <p>about works!</p>
-about{{userService.userName}}
+<!-- about {{ userService.userName }} -->
+<ul>
+    <li *ngFor="let aboutUser of aboutUsers; let i = index">
+        {{ i }} {{ aboutUser.name }}
+    </li>
+</ul>
+<!-- <hr>{{console.log(aboutUsers)}} -->
